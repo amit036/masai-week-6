@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta htt1p-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Cricket Scoreboard System</title>
+    <style>
+        .size-btn {
+            width: 400px;
+            margin-left: 210px;
+            height: 45px;
+        }
+
+        .margin {
+            margin-left: 700px;
+            margin-top: 200px;
+        }
+
+        .margin-btn {
+            width: 200px;
+        }
+        .margin-left{
+            margin-left: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container margin" id="teamDetails">
+        <h1>Enter Details</h1>
+        <div class="form-group">
+            <label>Team 1:</label>
+            <input class="form-control" type="text" id="team1" style="width: 400px" placeholder="India">
+        </div>
+        <div class="form-group">
+            <label>Team 2:</label>
+            <input class="form-control" type="text" id="team2" style="width: 400px" placeholder="England">
+        </div>
+        <button class="btn btn-primary" id="teamDetailsBtn" style="width: 400px">Enter</button>
+    </div>
+    <div class="container" id="team1Details" >
+        <h1>Fill Team <span id="team1Name"></span> Details</h1>
+        <div id="dom">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 1:</label>
+                    <input type="text" id="t1p1" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p1s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-1" class="form-control">
+                    <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 2:</label>
+                    <input type="text" id="t1p2" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p2s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-2" class="form-control">
+                    <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 3:</label>
+                    <input type="text" id="t1p3" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p3s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-3" class="form-control">
+                    <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 4:</label>
+                    <input type="text" id="t1p4" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p4s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-4" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 5:</label>
+                    <input type="text" id="t1p5" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p5s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-5" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 6:</label>
+                    <input type="text" id="t1p6" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p6s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-6" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 7:</label>
+                    <input type="text" id="t1p7" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p7s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-7" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 8:</label>
+                    <input type="text" id="t1p8" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p8s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-8" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 9:</label>
+                    <input type="text" id="t1p9" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t1p9s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-9" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 10:</label>
+                    <input type="text" id="t1p10" class="form-control">&nbsp;&nbsp;
+                </div>
+                <label>Specification :</label>
+                <select id="t1p10s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-10" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 11:</label>
+                    <input type="text" id="t1p11" class="form-control">&nbsp;&nbsp;
+                </div>
+                <label>Specification :</label>
+                <select id="t1p11s" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos1-11" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br><br>
+        <button class="btn btn-primary size-btn" id="team1DetailsBtn">Enter</button>
+    </div>
+
+
+
+
+    <div id="team2Details" class="container" >
+        <h1>Fill Team <span id="team2Name"></span> Details</h1>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 1:</label>
+                    <input type="text" id="t2Player1" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p1Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-1" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 2:</label>
+                    <input type="text" id="t2Player2" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p2Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-2" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 3:</label>
+                    <input type="text" id="t2Player3" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p3Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-3" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 4:</label>
+                    <input type="text" id="t2Player4" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p4Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-4" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 5:</label>
+                    <input type="text" id="t2Player5" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p5Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-5" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 6:</label>
+                    <input type="text" id="t2Player6" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p6Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-6" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 7:</label>
+                    <input type="text" id="t2Player7" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p7Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-7" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 8:</label>
+                    <input type="text" id="t2Player8" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p8Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-8" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 9:</label>
+                    <input type="text" id="t2Player9" class="form-control">&nbsp;&nbsp;
+                </div>
+                &nbsp;&nbsp;
+                <label>Specification :</label>
+                <select id="t2p9Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-9" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 10:</label>
+                    <input type="text" id="t2Player10" class="form-control">&nbsp;&nbsp;
+                </div>
+                <label>Specification :</label>
+                <select id="t2p10Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-10" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>Player 11:</label>
+                    <input type="text" id="t2Player11" class="form-control">&nbsp;&nbsp;
+                </div>
+                <label>Specification :</label>
+                <select id="t2p11Spec" class="form-control">
+                    <option value=" ">Select</option>
+                    <option value="batsman">Batsman</option>
+                    <option value="bowler">Bowler</option>
+                    <option value="allRounder">All-Rounder</option>
+                    <option value="batsmanKeeper">Batsman-Keeper</option>
+                </select>
+                &nbsp;&nbsp;
+                <label>Position :</label>
+                <select id="pos2-11" class="form-control">
+                        <option value="player">Player</option>
+                    <option value="captain">Captain</option>
+                    <option value="viceCaptain">Vice Captain</option>
+                </select>
+            </form>
+        </div>
+        <br><br>
+        <button class="btn btn-primary size-btn" id="team2DetailsBtn">Enter</button>
+    </div>
+    <div class=" container margin"  id="toss">
+        <level>Toss Won:</level>
+        <select id="tossSelect" class="form-control" style="width: 200px">
+        </select>
+        <br>
+        <level>Choose:</level>
+        <select id="choose" class="form-control" style="width: 200px">
+            <option value="Batting">Batting</option>
+            <option value="Fielding">Fielding</option>
+            </select>
+            <br>
+            <level>Cricket Format:</level>
+            <select id="format" class="form-control" style="width: 200px">
+                    <option value=" ">Select</option>
+                    <option value="T-20">T-20</option>
+                    <option value="One Day">One Day</option>
+                    <option value="Test">Test</option>
+                    </select>
+                    <br>
+        <button class="btn btn-primary margin-btn" id="tossBtn">Enter</button>
+    </div>
+    <div class="container-fluid" id="scoreBatTeam1" style="margin-top:100px">
+        <h1>1st Innings</h1>
+        <h2>Enter Batsman Statics</h2>
+        <form class="form-inline">
+            <label>Batsman Name:</label>&nbsp;
+            <select class="form-control" id="playersTeam1">
+                <option value=" ">Select</option>
+            </select>
+            <label>Runs:</label>&nbsp;
+            <input type="number" id="runs1" class="form-control">
+            <label>Balls:</label>&nbsp;
+            <input type="number" id="balls1" class="form-control">
+            <label>Sixes:</label>&nbsp;
+            <input type="number" id="sixes1" class="form-control">
+            <label>Fours:</label>&nbsp;
+            <input type="number" id="fours1" class="form-control">
+            <label>Status:</label>&nbsp;
+            <select class="form-control" id="status1">
+                <option value=" "></option>
+                <option value="out">Out</option>
+                <option value="notout">Not Out</option>
+            </select>
+            <label>Out by Bowler:</label>&nbsp;
+            <select class="form-control" id="outBy1">
+                <option value=" ">Select</option>
+            </select>
+        </form><br>
+        <button class="btn btn-primary " id="enterBatsmanStat1">Enter</button>
+    </div>
+   
+    <div class="container-fluid" id="scoreBallTeam2">
+            <h2>Enter Bowler Statics</h2>
+            <form class="form-inline">
+                <label>Bowler Name:</label>&nbsp;
+                <select class="form-control" id="bowlerTeam1">
+                    <option value=" ">Select</option>
+                </select>
+                <label>Overs:</label>&nbsp;
+                <input type="number" id="oversBowler1" class="form-control">
+                <label>Wickets:</label>&nbsp;
+                <input type="number" id="wicketsBowler1" class="form-control">
+                <label>Runs:</label>&nbsp;
+                <input type="number" id="runsBowler1" class="form-control">
+                <label>Extras:</label>&nbsp;
+                <input type="number" id="extrasBowler1" class="form-control">
+                <label>Economy:</label>&nbsp;
+                <input type="number" id="economyBowler1" class="form-control">
+                <br>
+                </form>
+    <button class="btn btn-primary " id="enterBowlerStat1">Enter</button>
+    <br>
+     <button class="btn btn-primary margin-btn margin-left " id="finishDetails1">Finish</button><br>
+    </div>
+  
+    <div class="container-fluid" id="scoreBatTeam2" style="margin-top:100px">
+            <h1>2nd Innings</h1>    
+            <h2>Enter Batsman Statics</h2>
+            <form class="form-inline">
+                <label>Batsman Name:</label>&nbsp;
+                <select class="form-control" id="playersTeam2">
+                    <option value=" ">Select</option>
+                </select>
+                <label>Runs:</label>&nbsp;
+                <input type="number" id="runs2" class="form-control">
+                <label>Balls:</label>&nbsp;
+                <input type="number" id="balls2" class="form-control">
+                <label>Sixes:</label>&nbsp;
+                <input type="number" id="sixes2" class="form-control">
+                <label>Fours:</label>&nbsp;
+                <input type="number" id="fours2" class="form-control">
+                <label>Status:</label>&nbsp;
+                <select class="form-control" id="status1">
+                    <option value=" "></option>
+                    <option value="out">Out</option>
+                    <option value="notout">Not Out</option>
+                </select>
+                <label>Out by Bowler:</label>&nbsp;
+                <select class="form-control" id="outBy2">
+                    <option value=" ">Select</option>
+                </select>
+            </form><br>
+            <button class="btn btn-primary " id="enterBatsmanStat2">Enter</button>
+        </div>
+        <div class="container-fluid" id="scoreBallTeam1">
+                <h2>Enter Bowler Statics</h2>
+                <form class="form-inline" onSubmit="return false">
+                    <label>Bowler Name:</label>&nbsp;
+                    <select class="form-control" id="bowlerTeam2">
+                        <option value=" ">Select</option>
+                    </select>
+                    <label>Overs:</label>&nbsp;
+                    <input type="number" id="oversBowler2" class="form-control">
+                    <label>Wickets:</label>&nbsp;
+                    <input type="number" id="wicketsBowler2" class="form-control">
+                    <label>Runs:</label>&nbsp;
+                    <input type="number" id="runs
+                    'ntgkoBowler2" class="form-control">
+                    <label>Extras:</label>&nbsp;
+                    <input type="number" id="extrasBowler2" class="form-control">
+                    <label>Economy:</label>&nbsp;
+                    <input type="number" id="economyBowler2" class="form-control">
+                    <br>
+        <button class="btn btn-primary" id="enterBowlerStat2">Enter</button><br>
+        <button class="btn btn-primary margin-btn margin-left mb-2" id="finishDetails2">Finish</button><br>
+        </div>
+       
+
+    <script src="index.js"></script>
+</body>
+
+</html>
